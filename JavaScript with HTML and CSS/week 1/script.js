@@ -15,11 +15,15 @@ function readForm() {
   }
 }
 
+//This function have the intend of show to the user the local time in the page;
 function showRespectiveTime() {
+  // The variable 'date' save the time datas of the user computer;
   let date = new Date();
+  // 'hour', 'minutes' and 'seconds' saves the respectives datas from 'date';
   let hour = date.getHours();
   let minutes = date.getMinutes();
   let seconds = date.getSeconds();
+  //This variable will save the information got from 'if' above;
   let session = '';
   
   if (hour.toFixed() < 12) {
@@ -27,8 +31,11 @@ function showRespectiveTime() {
   } else {
     session = 'PM'
   }
+  // 'time' generate the messange of the time with the data obtained;
   let time = hour + ':' +  minutes + ':' + seconds + ' ' + session
+  // We insert the content of 'time' in the HTML;
   document.getElementById('showMe').innerHTML = time;
+  // And we establish how ofter our function will be executed, to updated the data information, 1000ms = 1s.
   setTimeout(showRespectiveTime, 1000);
 }
 showRespectiveTime();
