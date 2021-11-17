@@ -23,7 +23,7 @@ function showRespectiveTime() {
   let hour = date.getHours();
   let minutes = date.getMinutes();
   let seconds = date.getSeconds();
-  //This variable will save the information got from 'if' above;
+  //This variable will save the information got from the 'if' above;
   let session = '';
   
   if (hour.toFixed() < 12) {
@@ -31,7 +31,7 @@ function showRespectiveTime() {
   } else {
     session = 'PM'
   }
-  // 'time' generate the messange of the time with the data obtained;
+  // 'time' generate the message of the time with the data obtained;
   let time = hour + ':' +  minutes + ':' + seconds + ' ' + session
   // We insert the content of 'time' in the HTML;
   document.getElementById('showMe').innerHTML = time;
