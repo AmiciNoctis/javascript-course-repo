@@ -49,7 +49,7 @@ function showRespectiveTime() {
   let session = '';
   
   if (hour.toFixed() < 12) {
-    session = 'AM';
+    session = 'AM ';
   } else {
     session = 'PM'
   }
